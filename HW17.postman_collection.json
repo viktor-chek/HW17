@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "b8620824-ae1b-49fc-b43e-1dba5133e52c",
+		"name": "HW17",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20932139"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:5000/movies/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Как называется картина?\",\r\n        \"description\": \"Добавь описание картины\",\r\n        \"trailer\": \"Ссылка на трейлер\",\r\n        \"year\": 2000,\r\n        \"rating\": 5.9,\r\n        \"genre_id\": 16,\r\n        \"director_id\": 19\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/movies/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						""
+					]
+				},
+				"description": "Запрос на добавления фильма в базу"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/movies/21",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Новое название\",\r\n        \"description\": \"Новое описание\",\r\n        \"trailer\": \"Новая ссылка на трейлер\",\r\n        \"year\": 2010,\r\n        \"rating\": 6.1,\r\n        \"genre_id\": 16,\r\n        \"director_id\": 18\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/movies/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"21"
+					]
+				},
+				"description": "Запрос на изменение информации о фильме"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:5000/movies/21",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/movies/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"movies",
+						"21"
+					]
+				},
+				"description": "Запрос на удаление раннее добавленного фильма"
+			},
+			"response": []
+		}
+	]
+}
